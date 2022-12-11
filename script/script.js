@@ -1,7 +1,8 @@
 const playButton = document.getElementById("play");
 playButton.addEventListener("click", function() {
     let clicked = []; //array caselle cliccate
-    points = 0;
+    let points = 0;
+    let getPoints = document.querySelector(".points")
     const squareDimension = 100;
     const numOfBombs = 16;
     const bombs = [];
@@ -37,6 +38,7 @@ playButton.addEventListener("click", function() {
                     square.classList.toggle("hold");
                     clicked.push(i);
                     points++;
+                    getPoints.innerHTML = `<h3 class="points ms-3">Punteggio: ${points} </h3>`
                 }
             } else {
                 console.log("Game Over");
