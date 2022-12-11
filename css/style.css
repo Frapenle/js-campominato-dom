@@ -46,3 +46,7 @@ section#minefield {
 .hold {
     box-shadow: none;
 }
+
+.bomb {
+    background-color: red;
+}
